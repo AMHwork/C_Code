@@ -1,0 +1,14 @@
+What is a signal? How is it handled? Where do signals come from? How multiple signals are handled?
+
+A signal is a aysunchronous notification sent to a process or to a specfic thread with the process to notify an event that has occuried.Each signal can be identified from 1 to 31. Signals don't carry any arguements and their names are self explanatory ign SIGKILL is signal 9 which mean to kill the program. 
+
+It is handled using numbers to represent the function that they are built for. 
+These signals are usually inbuilt into the computer and are stored onto the operating system.
+Multiple signals are usually handle with alarms. When a signal is being recieved it takes them in one at a time. 
+If there are mutlple signals comming through, there will be an alarm to delay the incoming signals. 
+
+Signals come form commandline, systemcalls and inputs.
+
+How does a process send a signal to another process?
+
+Usually the system will call the system call kill() to send a signal to another process. It needs to take in two arguement, the process ID and the signal you want to send to. If the call is successfull the function will return 0 else it will return a negative value. There are two signal handleers SIGINT and SIGQUIT, these share memeory and attach themsleves to a address space which saves it process ID. SIGQUIT handles a signal to quit and then detaches itself to the from the meory when another process wants to be activated or the current process wants to be terminated.

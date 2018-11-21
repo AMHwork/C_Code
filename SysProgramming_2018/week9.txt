@@ -1,0 +1,15 @@
+1) 
+
+// give permission
+chmod 755 set
+run program ./set
+
+2) shell does have variables
+they have 
+-global
+-local
+-environmental
+
+3) there are two different ways to run shell script
+Local : ./file
+environment : sh file
